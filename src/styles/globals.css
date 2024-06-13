@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* width */
+  --content-width: 50rem;
+  --gap: clamp(1rem, 6vw, 3rem);
+  --full: minmax(var(--gap), 1fr);
+  --content: min(45rem, 100% - var(--gap) * 2);
+  --feature: minmax(0, 5rem);
+
+  /* color */
+  --primary-color-01: #2ca3a8;
+  --primary-text-color: #fff0f5;
+  --secondary-color-01: #ffc0cb;
+  --secondary-color-02: #eb8899;
+  --primary-color-bg: #1b2020;
+  --secondary-color-text: #1b2020;
+  --secondary-color-bg: #333838;
+  --input-bg-color: #afc2c3;
+  --accent-color: #ffd700;
+  --label-color: #ff69b4;
+
+  /* text */
+  --heading01: clamp(1.5rem, 2.3vw, 2.5rem);
+  --headliner: clamp(3rem, 6vw, 5.5rem);
+  --heading02: clamp(1.4rem, 2.3vw, 2.3125rem);
+  --heading03: clamp(1.1rem, 1.6vw, 1.2625rem);
+  --paragraph-text: clamp(1rem, 1.2vw, 0.9rem);
+  --small-text: clamp(0.9rem, 1vw, 0.6rem);
+
+  /* line-height */
+  --heading-large-line-height: 1.5;
+  --default-line-height: 1.6;
+}
+
+body {
+  background: var(--primary-color-bg);
+  color: var(--primary-text-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  flex-grow: 1;
+}
+
+nav {
+  background: var(--secondary-color-bg);
+}
+
+.headliner {
+  font-size: var(--headliner);
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+}
+
+.bandheader {
+  font-size: clamp(1.5rem, 4.5vw, 5.5rem);
+  padding-top: 4rem;
+}
+
+.large-size {
+  font-size: var(--heading01);
+  line-height: var(--heading-large-line-height);
+  color: var(--primary-text-color);
+}
+
+.medium-size {
+  font-size: var(--heading02);
+  line-height: var(--default-line-height);
+  color: var(--primary-text-color);
+}
+
+.normal-size {
+  font-size: var(--heading03);
+  line-height: var(--default-line-height);
+}
+
+.small-size {
+  font-size: var(--paragraph-text);
+  font-weight: var(--normal);
+  line-height: var(--default-line-height);
+}
+.xsmall-size {
+  font-size: var(--small-text);
+  font-weight: var(--normal);
+  line-height: var(--default-line-height);
+}
+
+.image {
+  max-width: 400px;
+  max-height: 00px;
+}
+
+@keyframes pulse {
+  0% {
+    fill: currentColor;
+  }
+  50% {
+    fill: var(--primary-color-01);
+  }
+  100% {
+    fill: currentColor;
+  }
+}
+
+.pulse {
+  animation: pulse 4s infinite;
+}
+
+svg,
+img,
+iframe {
+  inline-size: 100%;
+  display: block;
+  block-size: auto;
+}
