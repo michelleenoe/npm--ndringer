@@ -78,6 +78,8 @@ export default function Camping({
       const data = await fetchAPI("/available-spots"); // Inde i loadCampingAreas funktionen kaldes fetchAPI med endpointet "/available-spots".
       //Denne funktion returnerer en Promise, som venter på at blive opfyldt ved at bruge await.
       //Resultatet af denne operation gemmes i variablen data.
+
+
       // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
       setCampingAreas(data); // Efter at have hentet data fra API'en, bruges setCampingAreas funktionen til at opdatere campingAreas state variablen med de data, vi modtog.
       //Komponenten re-renderer med de nye campingområder.
@@ -95,7 +97,7 @@ export default function Camping({
     // Definere en asynkron funktion loadCampingAreas, som henter data fra "/available-spots" API'en.
     //Når dataene er hentet, opdaterer den campingAreas state variablen med disse data.
     //Kalde loadCampingAreas funktionen med det samme for at udføre de ovennævnte trin.
-    //Fordi afhængighedsarrayet er tomt, vil denne process kun ske én gang ved komponentens initiale rendering.
+    //Fordi afhængighedsarrayet er tomt, vil denne process kun ske én gang ved komponentens initiale rendering // når komponentet bliver mounted.
 
 
 
